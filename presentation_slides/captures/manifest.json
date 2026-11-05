@@ -1,0 +1,262 @@
+{
+  "records": [
+    {
+      "name": "01_home",
+      "x": 0,
+      "y": 0,
+      "width": 1600,
+      "height": 1000,
+      "boxes": {
+        "menu": {
+          "x": 766,
+          "y": 20.5,
+          "width": 58,
+          "height": 58
+        },
+        "start": {
+          "x": 1311.453125,
+          "y": 899.5,
+          "width": 199.046875,
+          "height": 55
+        }
+      }
+    },
+    {
+      "name": "02_overview",
+      "x": 0,
+      "y": 0,
+      "width": 1600,
+      "height": 1000,
+      "boxes": {
+        "tabs": {
+          "x": 0,
+          "y": 323.875,
+          "width": 1590,
+          "height": 73
+        },
+        "experiment": {
+          "x": 85,
+          "y": 396.875,
+          "width": 1420,
+          "height": 99
+        }
+      }
+    },
+    {
+      "name": "03_normal_result",
+      "x": 469,
+      "y": 606.671875,
+      "width": 1036,
+      "height": 815.84375,
+      "boxes": {
+        "metrics": {
+          "x": 27,
+          "y": 98,
+          "width": 982,
+          "height": 117.09375
+        },
+        "downloads": {
+          "x": 27,
+          "y": 729.84375,
+          "width": 982,
+          "height": 59
+        }
+      }
+    },
+    {
+      "name": "04_model_settings",
+      "x": 85,
+      "y": 606.671875,
+      "width": 360,
+      "height": 1087.828125,
+      "boxes": {
+        "model": {
+          "x": 27,
+          "y": 650.859375,
+          "width": 306,
+          "height": 46
+        },
+        "run": {
+          "x": 27,
+          "y": 1016.828125,
+          "width": 306,
+          "height": 44
+        }
+      }
+    },
+    {
+      "name": "05_result_cleared",
+      "x": 469,
+      "y": 606.671875,
+      "width": 1036,
+      "height": 565,
+      "boxes": {
+        "empty": {
+          "x": 27,
+          "y": 98,
+          "width": 982,
+          "height": 440
+        }
+      }
+    },
+    {
+      "name": "06_new_image",
+      "x": 90,
+      "y": 606.671875,
+      "width": 360,
+      "height": 502.28125,
+      "boxes": {
+        "filename": {
+          "x": 134.890625,
+          "y": 186.1875,
+          "width": 90.203125,
+          "height": 21.59375
+        }
+      }
+    },
+    {
+      "name": "07_defect_result",
+      "x": 469,
+      "y": 606.671875,
+      "width": 1036,
+      "height": 815.84375,
+      "boxes": {
+        "metrics": {
+          "x": 27,
+          "y": 98,
+          "width": 982,
+          "height": 117.09375
+        },
+        "image": {
+          "x": 27,
+          "y": 261.78125,
+          "width": 982,
+          "height": 306.875
+        },
+        "downloads": {
+          "x": 27,
+          "y": 729.84375,
+          "width": 982,
+          "height": 59
+        }
+      }
+    },
+    {
+      "name": "08_downloads",
+      "x": 496,
+      "y": 1336.515625,
+      "width": 982,
+      "height": 59,
+      "boxes": {}
+    },
+    {
+      "name": "09_localize_result",
+      "x": 469,
+      "y": 770.46875,
+      "width": 1036,
+      "height": 758.625,
+      "boxes": {
+        "compare": {
+          "x": 27,
+          "y": 98,
+          "width": 982,
+          "height": 228.6875
+        },
+        "coordinates": {
+          "x": 27,
+          "y": 509.53125,
+          "width": 982,
+          "height": 143.09375
+        },
+        "downloads": {
+          "x": 27,
+          "y": 672.625,
+          "width": 982,
+          "height": 59
+        }
+      }
+    },
+    {
+      "name": "10_mask_compare",
+      "x": 501,
+      "y": 868.46875,
+      "width": 982,
+      "height": 228.6875,
+      "boxes": {}
+    },
+    {
+      "name": "11_coordinates",
+      "x": 501,
+      "y": 1280,
+      "width": 982,
+      "height": 143.09375,
+      "boxes": {}
+    },
+    {
+      "name": "12_preprocess",
+      "x": 85,
+      "y": 606.671875,
+      "width": 1420,
+      "height": 941.484375,
+      "boxes": {
+        "options": {
+          "x": 27,
+          "y": 329.78125,
+          "width": 306,
+          "height": 292
+        },
+        "compare": {
+          "x": 411,
+          "y": 95.1875,
+          "width": 982,
+          "height": 228.6875
+        },
+        "histogram": {
+          "x": 411,
+          "y": 628.90625,
+          "width": 982,
+          "height": 150
+        }
+      }
+    },
+    {
+      "name": "13_sandbox_notice",
+      "x": 85,
+      "y": 525.875,
+      "width": 1420,
+      "height": 56.796875,
+      "boxes": {}
+    },
+    {
+      "name": "14_mobile",
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 844,
+      "boxes": {
+        "tabs": {
+          "x": 0,
+          "y": 267.28125,
+          "width": 390,
+          "height": 60
+        }
+      }
+    },
+    {
+      "name": "15_mobile_menu",
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 844,
+      "boxes": {
+        "menu": {
+          "x": 0,
+          "y": 76,
+          "width": 390,
+          "height": 527
+        }
+      }
+    }
+  ],
+  "errors": []
+}

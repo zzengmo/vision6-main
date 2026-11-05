@@ -1,0 +1,30 @@
+{
+  "slides": 6,
+  "speaker_notes": true,
+  "editable_text_and_highlights": true,
+  "capture_source": "Actual local React web via Chrome CDP",
+  "capture_manifest": "captures/manifest.json",
+  "application_code_modified": false,
+  "training_called": false,
+  "aspect_ratio": "16:9",
+  "output": "SteelVision_ML_웹구현_발표.pptx",
+  "references": [
+    "frontend/src/App.tsx: useInference, Preprocess, Inspection, Localize",
+    "frontend/src/WorkspaceShell.tsx",
+    "frontend/src/workspace.css",
+    "server.py",
+    "deep_adapter.py",
+    "backend.py"
+  ],
+  "media_credit": "Slide 1: POSCO reference footage already included in the project",
+  "verification": {
+    "pptx_reopened": true,
+    "slides": 6,
+    "speaker_notes": 6,
+    "powerpoint_rendered_slides": 6,
+    "pdf_pages": 6,
+    "outside_slide_shapes": [],
+    "actual_browser_captures": 15,
+    "browser_runtime_errors": []
+  }
+}

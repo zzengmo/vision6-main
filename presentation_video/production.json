@@ -1,0 +1,197 @@
+{
+  "clips": [
+    {
+      "id": "01_intro",
+      "frames": 315,
+      "duration": 12,
+      "raw_duration": 12.2974857,
+      "wait_edited": false
+    },
+    {
+      "id": "02_workspace",
+      "frames": 241,
+      "duration": 12,
+      "raw_duration": 10.4878735,
+      "wait_edited": false
+    },
+    {
+      "id": "03_eda",
+      "frames": 172,
+      "duration": 15,
+      "raw_duration": 14.436838800000006,
+      "wait_edited": false
+    },
+    {
+      "id": "04_preprocess",
+      "frames": 299,
+      "duration": 18,
+      "raw_duration": 15.766102400000003,
+      "wait_edited": false
+    },
+    {
+      "id": "05_normal_input",
+      "frames": 253,
+      "duration": 8,
+      "raw_duration": 7.864810700000001,
+      "wait_edited": false
+    },
+    {
+      "id": "05_normal_result",
+      "frames": 45,
+      "duration": 10,
+      "raw_duration": 7.738368199999997,
+      "wait_edited": true
+    },
+    {
+      "id": "06_defect_input",
+      "frames": 184,
+      "duration": 8,
+      "raw_duration": 5.842319400000007,
+      "wait_edited": false
+    },
+    {
+      "id": "06_defect_result",
+      "frames": 138,
+      "duration": 12,
+      "raw_duration": 9.104368799999996,
+      "wait_edited": true
+    },
+    {
+      "id": "07_localize_input",
+      "frames": 287,
+      "duration": 8,
+      "raw_duration": 6.936967299999989,
+      "wait_edited": false
+    },
+    {
+      "id": "07_localize_result",
+      "frames": 224,
+      "duration": 20,
+      "raw_duration": 16.192245599999996,
+      "wait_edited": true
+    },
+    {
+      "id": "08_performance",
+      "frames": 166,
+      "duration": 13,
+      "raw_duration": 12.792164699999994,
+      "wait_edited": false
+    },
+    {
+      "id": "09_mobile",
+      "frames": 111,
+      "duration": 8,
+      "raw_duration": 7.479330199999997,
+      "wait_edited": false
+    },
+    {
+      "id": "10_closing",
+      "frames": 166,
+      "duration": 6,
+      "raw_duration": 6.102220600000001,
+      "wait_edited": false
+    }
+  ],
+  "runtime_errors": [],
+  "post_requests": [
+    "http://127.0.0.1:8502/api/preprocess?options=%7B%22clahe%22%3Atrue%2C%22bilateral%22%3Atrue%2C%22sharpen%22%3Afalse%2C%22opening%22%3Afalse%2C%22canny%22%3Atrue%2C%22grid%22%3Afalse%7D",
+    "http://127.0.0.1:8502/api/inspect?model=resnet18_tta&policy=RF_same_FP_budget",
+    "http://127.0.0.1:8502/api/inspect?model=resnet18_tta&policy=RF_same_FP_budget",
+    "http://127.0.0.1:8502/api/localize"
+  ],
+  "downloads": [
+    {
+      "name": "inspection.csv",
+      "bytes": 292
+    },
+    {
+      "name": "inspection_original.png",
+      "bytes": 362010
+    },
+    {
+      "name": "preprocessed.png",
+      "bytes": 174876
+    },
+    {
+      "name": "unet_boxes.csv",
+      "bytes": 135
+    },
+    {
+      "name": "unet_candidates.png",
+      "bytes": 3721
+    },
+    {
+      "name": "unet_mask.png",
+      "bytes": 3721
+    },
+    {
+      "name": "unet_overlay.png",
+      "bytes": 718211
+    }
+  ],
+  "real_browser": "Installed Google Chrome CDP",
+  "viewport": "1600x900 desktop, 390x844 mobile",
+  "model_results_fabricated": false,
+  "duration_seconds": 150,
+  "output_resolution": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "narration": "Microsoft Heami Desktop / ko-KR / locally synthesized",
+  "subtitles": "No burned-in subtitle strip. Separate SRT preserved.",
+  "sha256": "1a44e5f7c4bdbe6d08939ab0e61026f96a4cea27c676f2bfed2c73649740988b",
+  "bytes": 19361215,
+  "application_code_changed": false,
+  "training_called": false,
+  "media_credit": "POSCO reference assets already included in the project",
+  "verification": {
+    "full_audio_video_decode": "passed",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "fps": 30.0,
+    "frames": 4500,
+    "duration_seconds": 150.0,
+    "audio_rms_pcm16": 4615.7,
+    "audio_peak_pcm16": 28002.0,
+    "subtitle_cues": 0,
+    "sampled_frames_seconds": [
+      4,
+      18,
+      32,
+      49,
+      70,
+      88,
+      108,
+      119,
+      132,
+      140,
+      147
+    ],
+    "export_png_dimensions": [
+      1600,
+      256
+    ],
+    "export_boxes_in_original_bounds": true,
+    "external_srt_cues": 26
+  },
+  "output": "SteelVision_ML_demo.mp4",
+  "subtitle_removal": {
+    "previous_video_sha256": "ed7462edab595d5556e0e6320bc89141e338894f0e49dd17c4581cb1c90e2901",
+    "audio_stream_unchanged": true,
+    "narration_text_unchanged": true,
+    "separate_srt_unchanged": true,
+    "full_audio_video_decode": "passed",
+    "duration_seconds": 150,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "fps": 30,
+    "frames": 4500,
+    "caption_area_error_vs_clean_recording": 0.4002,
+    "mobile_and_closing_graphics_preserved": true
+  }
+}
