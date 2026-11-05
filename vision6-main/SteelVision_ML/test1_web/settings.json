@@ -1,0 +1,13 @@
+{
+  "csv": "data/train.csv",
+  "images": "../../../../최종_data_set-20261103T071216Z-1-001/최종_data_set/Severstal_Steel Defect Detection/train_images.zip",
+  "ui_python": "../.venv/Scripts/python.exe",
+  "worker_python": "../.venv-yolo/Scripts/python.exe",
+  "epochs": 5,
+  "seed": 42,
+  "port": 8502,
+  "deep_models": "artifacts/deep_learning/models",
+  "deep_notebook": "reference/test1_deep_learning_comparison.ipynb",
+  "deep_source": "../deep/deep/test1_deep_learning.py",
+  "deep_training_details": "../deep/deep/test1_deep_learning_training_details_ko.txt"
+}

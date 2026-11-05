@@ -1,0 +1,10 @@
+**/.venv/
+**/.venv-yolo/
+**/.venv-model/
+**/__pycache__/
+**/.pytest_cache/
+**/.cache/
+**/.ipynb_checkpoints/
+**/artifacts/uploads/
+*.log
+**/node_modules/

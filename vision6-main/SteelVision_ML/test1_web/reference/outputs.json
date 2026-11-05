@@ -1,0 +1,79 @@
+{
+  "source": "saved_notebook_outputs_not_reexecuted",
+  "text": {
+    "2": "데이터 위치: /Users/yoon/Documents/Codex/2026-11-03/new-chat-2/kaggle/data\n학습 이미지 12,568장 / 정답 없는 대회 시험 이미지 5,506장\nCSV 결함 행 7,095개 / 이미지 크기 1600 × 256\n결함 이미지: 6,666 | 정상 이미지: 5,902\nsample_submission의 ClassId=0은 제출 예시용 값이며 시험 정답이 아닙니다.\n",
+    "4": "<Figure size 1470x420 with 3 Axes>",
+    "6": "<Figure size 1575x1050 with 8 Axes>",
+    "8": "<Figure size 1365x420 with 2 Axes>",
+    "10": "            images  defective  normal  defect_rate_pct\nsplit                                                 \ntest          2514       1333    1181             53.0\ntrain         7540       3999    3541             53.0\nvalidation    2514       1334    1180             53.1\n\n<Figure size 840x420 with 1 Axes>",
+    "12": "기존 특징 캐시 재사용: test1_features.npz\n모델 입력: 12,568장 × 39개 특징\n",
+    "14": "검증 AP 0.952 | ROC AUC 0.950\n선택 임계값 0.381 | 검증 재현율 0.951 | 정밀도 0.829\n\n<Figure size 1365x462 with 2 Axes>",
+    "16": "시험 이미지 2,514장 | 결함 1,333장\nAP 0.950 | ROC AUC 0.949\n재현율 0.956 | 정밀도 0.824\nTP 1,274 | FN 59 | FP 272 | TN 909\n\n<Figure size 1260x462 with 2 Axes>\n\n시험 세트 클래스별 경보 결과:\n ClassId  images  detected  recall\n       1     182       181   0.995\n       2      45        45   1.000\n       3    1040       988   0.950\n       4     157       148   0.943\n\n<Figure size 840x420 with 1 Axes>",
+    "18": "<Figure size 1365x966 with 4 Axes>",
+    "20": "Python 3.14.7 | OpenCV 5.0.0\n실행 환경: macOS-26.6.2-arm64-arm-64bit-Mach-O\n",
+    "22": "<Figure size 1365x840 with 4 Axes>\n<Figure size 1365x840 with 4 Axes>",
+    "24": "Pillow 200×32: 6.92 ms/image | validation AP 0.952 | holdout FN 59\n특징 캐시 재사용: OpenCV 100×16\nOpenCV 100×16: 6.64 ms/image | validation AP 0.948 | holdout FN 72\n특징 캐시 재사용: OpenCV 200×32\nOpenCV 200×32: 6.66 ms/image | validation AP 0.952 | holdout FN 59\n특징 캐시 재사용: OpenCV 400×64\nOpenCV 400×64: 7.55 ms/image | validation AP 0.955 | holdout FN 81\n특징 캐시 재사용: OpenCV 1600×256 (original)\nOpenCV 1600×256 (original): 21.10 ms/image | validation AP 0.953 | holdout FN 60\n특징 캐시 재사용: 200×32 + CLAHE\n200×32 + CLAHE: 6.58 ms/image | validation AP 0.954 | holdout FN 60\n특징 캐시 재사용: 200×32 + Blur/Sobel\n200×32 + Blur/Sobel: 6.63 ms/image | validation AP 0.923 | holdout FN 69\n특징 캐시 재사용: 200×32 + Top/Black-hat\n200×32 + Top/Black-hat: 6.74 ms/image | validation AP 0.929 | holdout FN 54\n\n판별 성능 (같은 분할, 검증에서 임계값 선택)\n                    method  val_ap  val_recall  val_fp  test_recall  test_precision  test_fn  test_fp\n             Pillow 200×32   0.952       0.951     262        0.956           0.824       59      272\n             OpenCV 100×16   0.948       0.951     254        0.946           0.826       72      266\n             OpenCV 200×32   0.952       0.951     262        0.956           0.824       59      272\n             OpenCV 400×64   0.955       0.951     245        0.939           0.826       81      264\nOpenCV 1600×256 (original)   0.953       0.951     292        0.955           0.820       60      279\n            200×32 + CLAHE   0.954       0.951     272        0.955           0.814       60      290\n       200×32 + Blur/Sobel   0.923       0.951     346        0.948           0.786       69      344\n    200×32 + Top/Black-hat   0.929       0.951     369        0.959           0.775       54      371\n\n속도 (이미지 한 장, 읽기·전처리·특징·예측 포함)\n                    method  preprocess_ms  predict_ms  total_ms  latency_iqr_ms  speed_vs_pillow  fit_s\n             Pillow 200×32          1.417       5.505     6.922           0.283            1.000  0.492\n             OpenCV 100×16          1.189       5.455     6.644           0.134            1.042  0.376\n             OpenCV 200×32          1.327       5.335     6.662           0.285            1.039  0.390\n             OpenCV 400×64          2.091       5.459     7.549           0.265            0.917  0.404\nOpenCV 1600×256 (original)         15.583       5.519    21.103           0.685            0.328  0.433\n            200×32 + CLAHE          1.330       5.253     6.583           0.049            1.051  0.407\n       200×32 + Blur/Sobel          1.343       5.282     6.625           0.152            1.045  0.383\n    200×32 + Top/Black-hat          1.323       5.413     6.736           0.417            1.028  0.388\n\n참고: 200×32 두 구현의 작은 속도 차이는 실행 상태에 따라 뒤바뀔 수 있습니다.\n예측 시간 자체가 전체 지연 시간의 큰 부분이므로, 크기 축소의 효과는 제한적입니다.\n",
+    "25": "<Figure size 1575x546 with 2 Axes>\n<Figure size 1470x483 with 2 Axes>",
+    "27": "특징 캐시 재사용: OpenCV 200×32\n특징 캐시 재사용: OpenCV 1600×256 (original)\n같은 홀드아웃 이미지의 직접 비교:\n         method  missed_defects  false_alarms\n  OpenCV 200×32              59           272\nOpenCV 1600×256              60           279\n축소본만 찾아낸 결함 29장 | 원본만 찾아낸 결함 28장 | 두 방법 모두 놓친 결함 31장\n축소본 - 원본 재현율 차이: +0.08%p | 짝지은 부트스트랩 95% 구간 [-0.98, +1.20]%p\n\n결함 클래스별 재현율 (복수 클래스 이미지는 각 클래스에 포함):\n ClassId  images  recall_200  recall_original  difference_pp\n       1     182       0.995            0.973          2.198\n       2      45       1.000            0.978          2.222\n       3    1040       0.950            0.957         -0.673\n       4     157       0.943            0.930          1.274\n\n결함 면적 사분위별 재현율:\narea_group  images  recall_200  recall_original  difference_pp\n  Smallest     334       0.967            0.955          1.198\n     Small     333       0.970            0.958          1.201\n     Large     333       0.970            0.973         -0.300\n   Largest     333       0.916            0.934         -1.802\n\n<Figure size 1260x462 with 2 Axes>",
+    "31": "PyTorch 2.14.1 | Ultralytics 8.4.202 | device mps\n            originals  patches  defect_patches\nsplit                                         \ntest              120      480             121\ntrain             360     1440             383\nvalidation         90      360              95\n\n<Figure size 1365x399 with 2 Axes>",
+    "33": "U-Net checkpoint reused\nYOLO checkpoint reused\nU-Net: /Users/yoon/Documents/Codex/2026-11-03/new-chat-2/kaggle/test1_segmentation/models/unet_best.pt\nYOLO: /Users/yoon/Documents/Codex/2026-11-03/new-chat-2/kaggle/test1_segmentation/models/yolo/weights/best.pt\n",
+    "35": "동일한 검증/시험 원본 이미지 기준:\nmodel  cutoff  val_dice  val_iou  val_recall  val_fn  val_fp  test_dice  test_iou  test_recall  test_fn  test_fp\n unet   0.549     0.497    0.331       1.000       0      40      0.478     0.314        0.969        2       52\n yolo   0.039     0.476    0.312       0.917       4      33      0.446     0.287        0.938        4       44\n원본 1장 전체 처리 시간 (ms):\n       median   mean    std\nmodel                      \nunet    36.50  46.83  43.10\nyolo    44.07  53.59  31.81\n선택: unet — unet만 검증 결함 재현율 95%를 충족했습니다.\n\n<Figure size 1365x945 with 4 Axes>",
+    "37": "<Figure size 1890x892.5 with 9 Axes>",
+    "40": "박스 선택 기준: sum | 검증 박스 Dice로 선택\n     split rule  images  box_precision  box_coverage  box_dice  mean_box_area\nvalidation mean      48          0.558         0.508     0.466      18642.854\nvalidation  sum      48          0.558         0.530     0.476      21077.729\n      test mean      64          0.505         0.467     0.422      16436.766\n      test  sum      64          0.497         0.516     0.450      24530.344\n클래스 3 박스 후보 확장: adaptive | 검증 결과로 선택\n     split   policy  defect_images  class3_images  box_dice  class3_coverage  normal_false_alarm_rate  normal_box_area\nvalidation baseline             48             38     0.476            0.582                    0.952        13137.500\nvalidation adaptive             48             38     0.497            0.636                    0.952        16024.333\n      test baseline             64             49     0.450            0.515                    0.929        16976.357\n      test adaptive             64             49     0.470            0.561                    0.929        21522.250\nClass 1 | ceccb1eef.jpg | test | candidates 3 -> shown 2 | candidate cutoff 140/255 | selected CSV-mask coverage 81.3% | mean scores [0.7, 0.566]\nClass 2 | 00c88fed0.jpg | outside 570-image experiment | candidates 4 -> shown 2 | candidate cutoff 140/255 | selected CSV-mask coverage 33.5% | mean scores [0.696, 0.725]\nClass 3 | d5d024e03.jpg | outside 570-image experiment | candidates 10 -> shown 2 | candidate cutoff 60/255 | selected CSV-mask coverage 52.6% | mean scores [0.381, 0.479]\nClass 4 | 1fc012f23.jpg | outside 570-image experiment | candidates 19 -> shown 2 | candidate cutoff 140/255 | selected CSV-mask coverage 95.7% | mean scores [0.71, 0.709]\nOfficial test | 0000f269f.jpg | candidates 2 -> shown 2 | candidate cutoff 140/255 | scores [0.795, 0.716]\n\n<Figure>\n<Figure>\n<Figure>\n<Figure>\n<Figure>",
+    "42": "<Figure>"
+  },
+  "images": {
+    "4": [
+      "cell_04_0.png"
+    ],
+    "6": [
+      "cell_06_0.png"
+    ],
+    "8": [
+      "cell_08_0.png"
+    ],
+    "10": [
+      "cell_10_1.png"
+    ],
+    "14": [
+      "cell_14_1.png"
+    ],
+    "16": [
+      "cell_16_1.png",
+      "cell_16_3.png"
+    ],
+    "18": [
+      "cell_18_0.png"
+    ],
+    "22": [
+      "cell_22_0.png",
+      "cell_22_1.png"
+    ],
+    "25": [
+      "cell_25_0.png",
+      "cell_25_1.png"
+    ],
+    "27": [
+      "cell_27_1.png"
+    ],
+    "31": [
+      "cell_31_1.png"
+    ],
+    "35": [
+      "cell_35_1.png"
+    ],
+    "37": [
+      "cell_37_0.png"
+    ],
+    "40": [
+      "cell_40_1.png",
+      "cell_40_2.png",
+      "cell_40_3.png",
+      "cell_40_4.png",
+      "cell_40_5.png"
+    ],
+    "42": [
+      "cell_42_0.png"
+    ]
+  }
+}

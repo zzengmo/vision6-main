@@ -1,0 +1,48 @@
+{
+  "reference_page": "https://www.posco.co.kr/homepage/docs/kor7/jsp/s91a0000001i.jsp",
+  "assets": [
+    {
+      "file": "posco-reference-01.jpg",
+      "source": "https://www.posco.co.kr/docs/kor7/jsp/resources/images/main/main_visual_img_01.jpg",
+      "bytes": 164373
+    },
+    {
+      "file": "posco-reference-02.jpg",
+      "source": "https://www.posco.co.kr/docs/kor7/jsp/resources/images/main/main_visual_img_02.jpg",
+      "bytes": 170588
+    },
+    {
+      "file": "posco-reference-03.jpg",
+      "source": "https://www.posco.co.kr/docs/kor7/jsp/resources/images/main/main_visual_img_03.jpg",
+      "bytes": 122231
+    }
+  ],
+  "videos": [
+    {
+      "variant": "desktop",
+      "file": "steel-hero-desktop.mp4",
+      "poster": "steel-hero-desktop.jpg",
+      "source": "https://www.posco.co.kr/docs/kor7/jsp/resources/video/POSCO_30sec_A.mp4",
+      "original_bytes": 90893850,
+      "bytes": 8118995,
+      "sha256": "2b3cd411a3b06f654c1b5ab84baa62d4c35916e8804a80811ba8cd44a54175cf",
+      "encoding": "H.264 yuv420p / AAC / faststart / 24fps",
+      "width": 1280,
+      "original_sha256": "8348816aea1741f487ea639da1a2ada1021514ef3f00213dcb19258fea16cc3c",
+      "has_audio": true
+    },
+    {
+      "variant": "mobile",
+      "file": "steel-hero-mobile.mp4",
+      "poster": "steel-hero-mobile.jpg",
+      "source": "https://www.posco.co.kr/docs/kor7/jsp/resources/video/0729_POSCO_30sec_mobile.mp4",
+      "original_bytes": 23663849,
+      "bytes": 4677329,
+      "sha256": "2e5d14a0828b0f83f2388e1f03dc096c74f9fe303d879562643798884e9d0a34",
+      "encoding": "H.264 yuv420p / AAC / faststart / 24fps",
+      "width": 540,
+      "original_sha256": "a95bfd21d4a2a637d2c8907b77024e640904f545096358a047b3587fe78e99e5",
+      "has_audio": true
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+{
+    "python.defaultInterpreterPath": "${workspaceFolder}/vision6-main/SteelVision_ML/.venv/Scripts/python.exe"
+}

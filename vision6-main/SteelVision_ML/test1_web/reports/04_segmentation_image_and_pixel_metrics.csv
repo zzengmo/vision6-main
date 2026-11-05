@@ -1,0 +1,5 @@
+﻿experiment,n,pixel_unit,tp,fp,fn,tn,recall,precision,f1,pixel_dice,pixel_iou,source
+test1.ipynb U-Net（선택）,120,resized_patch,62,52,2,4,0.96875,0.543859649122807,0.6966292134831461,0.478,0.314,saved_notebook_rounded_mask_metrics
+test1.ipynb YOLO semantic,120,resized_patch,60,44,4,12,0.9375,0.5769230769230769,0.7142857142857143,0.446,0.287,saved_notebook_rounded_mask_metrics
+기존 프로젝트 YOLO11n-seg,90,original_image_pixels,44,27,1,18,0.9777777777777777,0.6197183098591549,0.7586206896551724,0.5298897276838018,0.36044216387179334,actual_local_evaluation
+test1_web U-Net 현재 PC 재현,120,resized_patch,62,55,2,1,0.96875,0.5299145299145299,0.6850828729281768,0.42049332253154614,0.266218135402561,actual_local_evaluation

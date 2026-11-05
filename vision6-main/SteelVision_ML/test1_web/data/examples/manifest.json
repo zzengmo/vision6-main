@@ -1,0 +1,55 @@
+{
+  "source": "user supplied four JPEG files, associated with notebook cell 6 examples",
+  "originals_present": true,
+  "images_transformed": false,
+  "examples": [
+    {
+      "class_id": 1,
+      "filename": "ceccb1eef.jpg",
+      "coverage_pct": 1.4,
+      "source_filename": "KakaoTalk_20261105_103159869_02.jpg",
+      "sha256": "4af36cf507efb5add729cc1c7087d58686662d87b8c18edd6f6c7f3cbd946a8c",
+      "width": 1600,
+      "height": 256,
+      "source": "user_provided_kakaotalk_attachment",
+      "mapping_basis": "user-provided originals visually correspond to the notebook examples",
+      "dataset_original_bytes_verified": false
+    },
+    {
+      "class_id": 2,
+      "filename": "00c88fed0.jpg",
+      "coverage_pct": 1.1,
+      "source_filename": "KakaoTalk_20261105_103159869.jpg",
+      "sha256": "07229badbbe995daa721439c9707639d7444ebe969353ea026e151b68b251170",
+      "width": 1600,
+      "height": 256,
+      "source": "user_provided_kakaotalk_attachment",
+      "mapping_basis": "user-provided originals visually correspond to the notebook examples",
+      "dataset_original_bytes_verified": false
+    },
+    {
+      "class_id": 3,
+      "filename": "d5d024e03.jpg",
+      "coverage_pct": 7.1,
+      "source_filename": "KakaoTalk_20261105_103159869_03.jpg",
+      "sha256": "014928330b4bc436d97ed2f93b5428e36cb6ff161682372c6d4d5b6175e01b56",
+      "width": 1600,
+      "height": 256,
+      "source": "user_provided_kakaotalk_attachment",
+      "mapping_basis": "user-provided originals visually correspond to the notebook examples",
+      "dataset_original_bytes_verified": false
+    },
+    {
+      "class_id": 4,
+      "filename": "1fc012f23.jpg",
+      "coverage_pct": 11.0,
+      "source_filename": "KakaoTalk_20261105_103159869_01.jpg",
+      "sha256": "380e57f68f524211bb91697d5deac5d14c773ad612b7c7737126455efab26f62",
+      "width": 1600,
+      "height": 256,
+      "source": "user_provided_kakaotalk_attachment",
+      "mapping_basis": "user-provided originals visually correspond to the notebook examples",
+      "dataset_original_bytes_verified": false
+    }
+  ]
+}
