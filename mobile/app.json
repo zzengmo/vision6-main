@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "SteelVision ML",
+    "slug": "steelvision-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "steelvision",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.steelvision.mobile",
+      "infoPlist": {
+        "NSLocalNetworkUsageDescription": "같은 Wi-Fi의 SteelVision 서버에 사진을 보내 결함을 분석합니다.",
+        "NSAppTransportSecurity": {"NSAllowsLocalNetworking": true}
+      }
+    },
+    "android": {
+      "package": "com.steelvision.mobile",
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      ["expo-image-picker", {"photosPermission": "철강 표면 결함을 분석할 사진을 선택합니다.", "cameraPermission": false, "microphonePermission": false}],
+      "expo-document-picker"
+    ]
+  }
+}

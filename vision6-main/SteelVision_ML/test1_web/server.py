@@ -141,6 +141,29 @@ def preprocess_image(raw, options):
 
 
 class Handler(BaseHTTPRequestHandler):
+    def end_headers(self):
+        origin = self.headers.get('Origin')
+        if origin and origin in getattr(self.server, 'allowed_origins', ()):
+            self.send_header('Access-Control-Allow-Origin', origin)
+            self.send_header('Vary', 'Origin')
+        super().end_headers()
+
+    def do_OPTIONS(self):
+        origin = self.headers.get('Origin')
+        if not urlsplit(self.path).path.startswith('/api/') or origin not in getattr(self.server, 'allowed_origins', ()):
+            return self.json(403, dict(error='허용되지 않은 앱 주소입니다.'))
+        if self.headers.get('Access-Control-Request-Method', 'GET') not in {'GET', 'POST'}:
+            return self.json(405, dict(error='지원하지 않는 요청 방식입니다.'))
+        requested = {name.strip().lower() for name in self.headers.get('Access-Control-Request-Headers', '').split(',') if name.strip()}
+        if not requested.issubset({'content-type', 'accept'}):
+            return self.json(403, dict(error='지원하지 않는 요청 헤더입니다.'))
+        self.send_response(204)
+        self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type, Accept')
+        self.send_header('Access-Control-Max-Age', '600')
+        self.send_header('Content-Length', '0')
+        self.end_headers()
+
     def send(self, code, content, mime):
         self.send_response(code)
         self.send_header('Content-Type', mime)
@@ -214,7 +237,10 @@ class Handler(BaseHTTPRequestHandler):
         path = unquote(urlsplit(self.path).path)
         try:
             if path == '/api/health':
-                return self.json(200, dict(ok=True, app='steelvision-react', version='video-home-v2'))
+                host = self.server.server_address[0]
+                return self.json(200, dict(ok=True, app='steelvision-react', version='video-home-v2',
+                                           listen_host=host, port=self.server.server_port,
+                                           network_access=host not in {'127.0.0.1', '::1', 'localhost'}))
             if path == '/_stcore/health':
                 return self.send(200, b'ok', 'text/plain')
             if path == '/api/metadata':
@@ -296,11 +322,17 @@ class Handler(BaseHTTPRequestHandler):
             self.json(500, dict(error='분석 중 오류가 발생했습니다: '+str(exc)))
 
 
-def main():
+def parse_arguments(argv=None):
     parser = argparse.ArgumentParser()
     parser.add_argument('--port', type=int, default=8502)
+    parser.add_argument('--host', default='127.0.0.1', help='Use 0.0.0.0 for a phone on the same local network.')
+    parser.add_argument('--allow-origin', action='append', default=[], help='Optional Expo web preview origin; native apps do not need CORS.')
     parser.add_argument('--open-browser', action='store_true')
-    args = parser.parse_args()
+    return parser.parse_args(argv)
+
+
+def main():
+    args = parse_arguments()
     if not (DIST/'index.html').is_file():
         sys.exit('React 화면 빌드가 없습니다. frontend 폴더에서 npm run build를 실행하세요.')
     state = deep.status()
@@ -309,8 +341,9 @@ def main():
             deep.audit_checkpoint()
         except (ValueError, OSError, RuntimeError) as exc:
             print('딥러닝 준비 안내: '+str(exc), flush=True)
-    server = ThreadingHTTPServer(('127.0.0.1', args.port), Handler)
-    print(f'SteelVision ML: http://127.0.0.1:{args.port}', flush=True)
+    server = ThreadingHTTPServer((args.host, args.port), Handler)
+    server.allowed_origins = tuple(args.allow_origin)
+    print(f'SteelVision ML: http://{args.host}:{args.port}', flush=True)
     if args.open_browser:
         threading.Timer(.7, lambda: webbrowser.open(f'http://127.0.0.1:{args.port}')).start()
     try:
