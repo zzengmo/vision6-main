@@ -119,46 +119,13 @@
         551,
         73
       ]
-    },
-    {
-      "start": 158,
-      "end": 159.4,
-      "label": "평가 출처 안내와 모바일 반응형",
-      "rect": [
-        113,
-        216,
-        1684,
-        88
-      ]
-    },
-    {
-      "start": 169,
-      "end": 171,
-      "label": "평가 출처 안내와 모바일 반응형",
-      "rect": [
-        1194,
-        28,
-        392,
-        835
-      ]
-    },
-    {
-      "start": 171,
-      "end": 171.65,
-      "label": "모바일 복귀와 마무리",
-      "rect": [
-        1194,
-        28,
-        392,
-        835
-      ]
     }
   ],
   "inserted_hold_seconds": 30,
   "source_sha256": "1a44e5f7c4bdbe6d08939ab0e61026f96a4cea27c676f2bfed2c73649740988b",
   "all_existing_video_files_unchanged": true,
-  "sha256": "ea3995a8c1cca170bbbec2ff50e4740966892ddcc0af3fe877b874b361b700de",
-  "bytes": 18931050,
+  "sha256": "3626fb5d9e4aeb2a9d894ecefb4e93d7f3a736b921a44ff6b11714233f602779",
+  "bytes": 18910692,
   "verification": {
     "full_decode": "passed",
     "all_red_borders_detected": true,
@@ -320,24 +287,7 @@
       "end": 141,
       "hold": 2,
       "label": "평가 출처 안내와 모바일 반응형",
-      "boxes": [
-        [
-          11,
-          12.4,
-          113,
-          216,
-          1684,
-          88
-        ],
-        [
-          22,
-          24,
-          1194,
-          28,
-          392,
-          835
-        ]
-      ],
+      "boxes": [],
       "output_start": 147,
       "output_end": 171
     },
@@ -346,21 +296,44 @@
       "end": 150,
       "hold": 0,
       "label": "모바일 복귀와 마무리",
-      "boxes": [
-        [
-          0,
-          0.65,
-          1194,
-          28,
-          392,
-          835
-        ]
-      ],
+      "boxes": [],
       "output_start": 171,
       "output_end": 180
     }
   ],
   "presenter_script": "SteelVision_ML_presenter_script_3min.txt",
   "presenter_script_sha256": "30e5e1bf532b605061e34305602cc91744a8d9da9617639061bab69fcf328836",
-  "red_outline_meaning": "Presentation emphasis around existing UI panels; not additional model predictions"
+  "removed_emphasis_seconds": [
+    [
+      158,
+      159.4
+    ],
+    [
+      169,
+      171.65
+    ]
+  ],
+  "border_removal_verification": [
+    {
+      "second": 158.1,
+      "red_pixels": 0
+    },
+    {
+      "second": 158.8,
+      "red_pixels": 0
+    },
+    {
+      "second": 169.4,
+      "red_pixels": 0
+    },
+    {
+      "second": 170.5,
+      "red_pixels": 0
+    },
+    {
+      "second": 171.3,
+      "red_pixels": 0
+    }
+  ],
+  "other_files_unchanged": true
 }
